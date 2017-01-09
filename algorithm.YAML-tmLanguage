@@ -1,0 +1,54 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: ALGORITHME
+scopeName: source.algo
+fileTypes: [algo]
+uuid: 3dd30ce7-8296-489b-ad28-25323d1ac60f
+
+patterns:
+## Programme
+- match: \b(Algorithme|Variables|Constantes|Fin|Debut)\b
+  name: constant.numeric.algo
+
+## Conditionnelle
+- match: \b(SI|FINSI|ALORS|SINON|CAS|PARMI|PAR DEFAUT|FINCASPARMI)\b
+  name: keyword.control.algo
+
+## switch 2
+- match: (CAS)[0-9]{1,8}
+  name: keyword.control.algo
+
+## Iterative
+- match: \b(POUR|ALLANT DE|A|AU PAS DE|FAIRE|FINPOUR|TANT QUE|FINTANTQUE|REPETER|JUSQU'A)\b
+  name: entity.name.function.algo 
+
+## Variable
+- match: \b(ENTIER|REEL|BOOLEEN|CARACTERE|CHAINE)\b
+  name: storage.type.algo
+
+## Structure
+- match: \b(STRUCTURE|DEBUTSTRUCTURE|FINSTRUCTURE)\b
+  name: support.function.algo
+
+## Commentaires
+- match: '(?<=\s|\w)[\/]{2,}.*'
+  name: comment.algo
+
+## Tableau
+- begin: '(TABLEAU \[)(.*?)(\])'
+  beginCaptures:
+   '1': {name: storage.type.algo}
+   '3': {name: storage.type.algo}
+  end: ' '
+
+## Tableau n Dim
+- begin: '( \[)(.*?)(\])'
+  beginCaptures:
+   '1': {name: storage.type.algo}
+   '3': {name: storage.type.algo}
+  end: ' '
+
+## Number 
+- name: constant.numeric.algo
+  match: '\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b'
+

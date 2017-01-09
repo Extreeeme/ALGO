@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+Algorithme ${1:myProgramme}
+Variables
+	$2
+Debut
+	$3
+Fin]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>algo</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.algo</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Algorithme template</description>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+Si ${1:La condition bro'}
+	Alors
+	$2
+Fsi]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>si</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.algo</scope>
+</snippet>
